@@ -10,7 +10,7 @@
 		"show_toast": false,
 		"announce_to_chat": false
 	},
-	"parent": "kitsuno:kitsuno",
+	"parent": "pseudo-enchantments:pseudo-enchantments",
     "criteria": {
 		"tick": {
 			"trigger": "minecraft:tick"
