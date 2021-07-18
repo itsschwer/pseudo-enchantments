@@ -11,7 +11,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{display:{Name:'{\"text\":\"Enchanted Scroll\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\"Extinguish\",\"color\":\"#7373DD\",\"italic\":false}']},Enchantments:[{}]}"
+                            "tag": "{display:{Name:'{\"text\":\"Enchanted Scroll\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\"Extinguish\",\"color\":\"#7373DD\",\"italic\":false}']},Enchantments:[{}],HideFlags:32}"
                         }
                     ],
                     "conditions": [
