@@ -30,6 +30,14 @@ However, as using a pseudo-enchantment in its Enchanted Scroll form would occupy
 
 ## Technical
 
+### Obtaining
+
+*Extinguish* scrolls are obtained by killing a mob while on fire and under the effect of Fire Resistance.
+
+This is done using two advancements:
+- `fire_kill` ensures that the player obtains an *Extinguish* scroll the first time they meet the advancement conditions *(through the reward function `give_enchantment`)*.
+- `fire_kill_extra` allows players to obtain more *Extinguish* scrolls when they meet the same conditions, 10% of the time *(through the reward loot table `extinguish_reward`)*.
+
 ### Effect
 
 The *Extinguish* pseudo-enchantment relies on the predicate `valid_target` and the hidden advancement `enter_fire_source`.
@@ -45,10 +53,7 @@ Execution is as follows:
         - Player is not currently under the effect of Fire Resistance
 4. `enter_fire_source` is revoked from all players
     - This has to be done in `tick` rather than an advancement reward function, since `enter_block` could trigger up to 8 times *(once for every block occupied by the player that meets the trigger conditions)*
-
-### Obtaining
-
-TBA
+        - *Upon reflection this doesn't really matter in this case, but `tick` is required to apply Fire Resistance already, so might as well use it*
 
 ## Functions
 *Split between 'Available' (i.e. fine to call using `/function`) and 'Internal' (not intended to be called by `/function`).*
