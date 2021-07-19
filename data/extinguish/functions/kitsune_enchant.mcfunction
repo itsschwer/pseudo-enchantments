@@ -10,3 +10,6 @@ kill @e[type=item,nbt={OnGround:1b},nbt={Item:{id:"minecraft:flower_banner_patte
 # Play sound
 playsound minecraft:entity.fox.screech neutral @a ~ ~ ~ 1.5 1
 playsound minecraft:entity.illusioner.cast_spell neutral @a
+
+# Clean up
+data remove storage schwer:sks_store Thrower
