@@ -1,11 +1,15 @@
 # pseudo-enchantments
 [![Datapacks](https://img.shields.io/badge/See_more-datapacks-C7A978.svg)](https://github.com/itsschwer?tab=repositories&q=&type=&language=mcfunction&sort=)
 
-TBA
+A datapack implementing pseudo-enchantments that take effect either when equipped or in the inventory.
 
 ## Intention
 
-TBA
+This datapack aims to add some quality-of-life 'enchantments' to vanilla surival gameplay.
+
+These pseudo-enchantments are obtained in the form of Enchanted Scrolls (as opposed to Enchanted Books) and take effect when in the inventory — even without being applied to an item.
+
+However, as using a pseudo-enchantment in its Enchanted Scroll form would occupy an inventory slot, players can also apply pseudo-enchantments onto certain other items *(e.g. armor)* through the ***[kitsune](https://github.com/itsschwer/kitsune)*** datapack.
 
 ## Guide
 *This datapack was developed in 1.17 (`"pack_format": 7`) but should be compatible with versions using an equivalent or greater `pack_format`, barring major changes to commands/datapacks.*
@@ -31,12 +35,36 @@ TBA
 
 ### Available
 
+#### `clear`
+TBA
+
+#### `give_enchantment`
 TBA
 
 ### Internal
 
+#### `apply_fire_resistance`
+TBA
+
+#### `kitsune_enchant_check`
+TBA
+
+#### `kitsune_enchant`
+TBA
+
+#### `load`
+TBA
+
+#### `revoke_fire_kill_extra`
+TBA
+
+#### `tick`
 TBA
 
 # References
 *(Roughly in personal use order)*
-- TBA
+- [Minecraft Wiki](https://minecraft.fandom.com/wiki/Minecraft_Wiki)
+- [Misode's Data Pack Generators](https://misode.github.io/)
+- [MCStacker](https://mcstacker.net/)
+- [kitsune](https://github.com/itsschwer/kitsune)
+    - *Integration — this datapack was originally contained within **kitsune***
