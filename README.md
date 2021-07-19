@@ -26,7 +26,9 @@ However, as using a pseudo-enchantment in its Enchanted Scroll form would occupy
 
 *Extinguish* grants Fire Resistance while on fire outside of a fire source.
 
-*TBA — enchantable items*
+Items *Extinguish* can be applied to through Kitsune blessing:
+- All armor *(including Turtle Shells)*
+- Elytra
 
 ## Technical
 

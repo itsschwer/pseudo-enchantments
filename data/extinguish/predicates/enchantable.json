@@ -30,7 +30,8 @@
                         "minecraft:netherite_chestplate",
                         "minecraft:netherite_leggings",
                         "minecraft:netherite_boots",
-                        "minecraft:elytra"
+                        "minecraft:elytra",
+                        "minecraft:turtle_helmet"
                     ]
                 }
             }
