@@ -6,7 +6,7 @@
 		},
 		"title": "Pseudo-enchantments",
 		"frame": "goal",
-		"description": ["",{"text":"Pseudo-enchantments","color":"#C77AFF"}],
+		"description": ["",{"text":"Quality-of-life pseudo-enchantments","color":"#C77AFF"}],
 		"show_toast": false,
 		"announce_to_chat": false
 	},
