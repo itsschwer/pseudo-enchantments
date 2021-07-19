@@ -41,7 +41,7 @@ TBA
 Removes the presence of this datapack by clearing the scheduled `tick` function.
 
 #### `give_enchantment`
-Gives the nearest player an Enchanted Scroll with *Extinguish*.
+Gives the target entity *(only succeeds for players)* an Enchanted Scroll with *Extinguish*.
 
 Used by the advancement `fire_kill` to give the recipient an *Extinguish* scroll as a reward.
 
