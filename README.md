@@ -26,7 +26,27 @@ However, as using a pseudo-enchantment in its Enchanted Scroll form would occupy
 
 *Extinguish* grants Fire Resistance while on fire outside of a fire source.
 
+*TBA — enchantable items*
+
 ## Technical
+
+### Effect
+
+The *Extinguish* pseudo-enchantment relies on the predicate `valid_target` and the hidden advancement `enter_fire_source`.
+
+Execution is as follows:
+1. `enter_fire_source` is fulfilled by players is in any of: Fire, Soul Fire, Lava Cauldron,  or Lava
+    - An advancement is used as the `enter_block` trigger provides an incredibly simple way to check for the blocks the player is occupying. This does, however, limit the effects of *Extinguish* to players only.
+2. `tick` is run
+3. Players matching the predicate `valid_target` is given Fire Resistance for 1 second
+    - `valid_target` checks that:
+        - Player inventory contains an item with *Extinguish*
+        - Player does <u>*not*</u> have the `entire_fire_source` advancement
+        - Player is not currently under the effect of Fire Resistance
+4. `enter_fire_source` is revoked from all players
+    - This has to be done in `tick` rather than an advancement reward function, since `enter_block` could trigger up to 8 times *(once for every block occupied by the player that meets the trigger conditions)*
+
+### Obtaining
 
 TBA
 
