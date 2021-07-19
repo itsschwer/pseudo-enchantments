@@ -22,9 +22,11 @@ However, as using a pseudo-enchantment in its Enchanted Scroll form would occupy
 
 # Extinguish
 
-TBA
+*Isn't fire tick damage annoying? Especially when your armor effectively nullifies it (when at full hunger)? <u>Especially</u> after swimming in lava?*
 
-## Mechanics
+*Extinguish* grants Fire Resistance while on fire outside of a fire source.
+
+## Technical
 
 TBA
 
@@ -36,30 +38,48 @@ TBA
 ### Available
 
 #### `clear`
-TBA
+Removes the presence of this datapack by clearing the scheduled `tick` function.
 
 #### `give_enchantment`
-TBA
+Gives the nearest player an Enchanted Scroll with *Extinguish*.
+
+Used by the advancement `fire_kill` to give the recipient an *Extinguish* scroll as a reward.
 
 ### Internal
 
 #### `apply_fire_resistance`
-TBA
+Gives the target 1 second of Fire Resistance.
 
 #### `kitsune_enchant_check`
-TBA
+Integration with ***[kitsune](https://github.com/itsschwer/kitsune)***.
+
+Calls `kitsune_enchant` when the following conditions are met:
+- Kitsune is holding an item that can be 'blessed' with *Extinguish*
+- The blessing material is an *Extinguish* scroll
+
+Called through `#kitsune:try_enchant`.
 
 #### `kitsune_enchant`
-TBA
+Integration with ***[kitsune](https://github.com/itsschwer/kitsune)***.
+
+Applies *Extinguish* to the target Kitsune's held item. Also grants the advancement `kitsune:enchant`.
+
+Called from `kitsune_enchant_check`.
 
 #### `load`
-TBA
+Sets up this datapack by starting the `tick` loop.
+
+Called through Minecraft's *`load.json`*.
 
 #### `revoke_fire_kill_extra`
-TBA
+Revokes the advancement `fire_kill_extra`.
+
+Used by the advancement `fire_kill_extra` to reward the recipient with an *Extinguish* scroll 10% of the time the player fulfills the advancment.
 
 #### `tick`
-TBA
+The main update loop. Handles the *Extinguish* effect. Refer to *[Technical](#technical)*.
+
+Initialises from `load`.
 
 # References
 *(Roughly in personal use order)*
