@@ -39,6 +39,7 @@ Items *Extinguish* can be applied to through Kitsune blessing:
 This is done using two advancements:
 - `fire_kill` ensures that the player obtains an *Extinguish* scroll the first time they meet the advancement conditions *(through the reward function `give_enchantment`)*.
 - `fire_kill_extra` allows players to obtain more *Extinguish* scrolls when they meet the same conditions, 10% of the time *(through the reward loot table `extinguish_reward`)*.
+    - Only occurs if the player does not currently have an item with *Extinguish* in their inventory.
 
 ### Effect
 
@@ -77,22 +78,6 @@ Used by the advancement `fire_kill` to give the recipient an *Extinguish* scroll
 #### `apply_fire_resistance`
 Gives the target 1 second of Fire Resistance.
 
-#### `kitsune_enchant_check`
-Integration with ***[kitsune](https://github.com/itsschwer/kitsune)***.
-
-Calls `kitsune_enchant` when the following conditions are met:
-- Kitsune is holding an item that can be 'blessed' with *Extinguish*
-- The blessing material is an *Extinguish* scroll
-
-Called through `#kitsune:try_enchant`.
-
-#### `kitsune_enchant`
-Integration with ***[kitsune](https://github.com/itsschwer/kitsune)***.
-
-Applies *Extinguish* to the target Kitsune's held item. Also grants the advancement `kitsune:enchant`.
-
-Called from `kitsune_enchant_check`.
-
 #### `load`
 Sets up this datapack by starting the `tick` loop.
 
@@ -101,12 +86,21 @@ Called through Minecraft's *`load.json`*.
 #### `revoke_fire_kill_extra`
 Revokes the advancement `fire_kill_extra`.
 
-Used by the advancement `fire_kill_extra` to reward the recipient with an *Extinguish* scroll 10% of the time the player fulfills the advancment.
+Used by the advancement `fire_kill_extra` to reward the recipient with an *Extinguish* scroll 10% of the time the player fulfills the advancement conditions (and does not have an item with *Extinguish* in their inventory).
 
 #### `tick`
 The main update loop. Handles the *Extinguish* effect. Refer to *[Technical](#technical)*.
 
 Initialises from `load`.
+
+#### **kitsune**
+- `kitsune/enchant_check`
+    - Uses predicate `enchantable` to check if held item can be 'blessed' with *Extinguish*
+    - Checks if blessing material is an *Extinguish* scroll
+- `kitsune/enchant`
+    - Applies *Extinguish* to the target Kitsune's held item
+    - Grants the advancement `kitsune:enchant`
+    - Consumes the blessing material
 
 # References
 *(Roughly in personal use order)*
