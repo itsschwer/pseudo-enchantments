@@ -18,6 +18,23 @@
                     }
                 }
             }
+        },
+        "no_extinguish": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Inventory:[{tag:{display:{Lore:['{\"text\":\"Extinguish\",\"color\":\"#7373DD\",\"italic\":false}']}}}]}"
+                            }
+                        }
+                    }
+                ]
+            }
         }
     },
     "rewards": {
